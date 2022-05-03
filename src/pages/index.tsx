@@ -23,6 +23,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Title</h1>
+      <a href="/login">LOGIN</a>
       <Button>Button</Button>
     </>
   );

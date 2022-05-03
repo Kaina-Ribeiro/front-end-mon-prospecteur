@@ -1,18 +1,17 @@
 import { ReactNode } from 'react';
 import * as S from './styles';
 
-interface ILayoutProps {
+interface ILoginLayoutProps {
   children: ReactNode;
 }
 
-const Layout = ({ children }: ILayoutProps) => {
+const LoginLayout = ({ children }: ILoginLayoutProps) => {
   return (
     <S.Layout>
-      <nav>Navbar</nav>
+      <S.Title variant="h2">Login</S.Title>
       <main>{children}</main>
-      <footer>Footer</footer>
     </S.Layout>
   );
 };
 
-export default Layout;
+export default LoginLayout;
