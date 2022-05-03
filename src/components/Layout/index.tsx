@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import Header from '../Header';
 import * as S from './styles';
 
 interface ILayoutProps {
@@ -8,7 +9,7 @@ interface ILayoutProps {
 const Layout = ({ children }: ILayoutProps) => {
   return (
     <S.Layout>
-      <nav>Navbar</nav>
+      <Header />
       <main>{children}</main>
       <footer>Footer</footer>
     </S.Layout>

@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
           />
 
           {(this.props as any).emotionStyleTags}
+          <link rel="icon" href="/favicon2.png" />
         </Head>
         <body>
           <Main />
