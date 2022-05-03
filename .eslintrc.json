@@ -1,0 +1,11 @@
+{
+  "extends": ["next", "prettier"],
+  "env": {
+    "jest": true,
+    "node": true,
+    "browser": true
+  },
+  "root": true,
+
+  "rules": { "no-unused-vars": "warn" }
+}
