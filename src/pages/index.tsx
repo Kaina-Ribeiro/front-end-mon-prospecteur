@@ -1,11 +1,12 @@
 import Head from 'next/head';
 import { ReactElement } from 'react';
+import SearchForm from '../components/SearchForm';
 import Layout from '../components/Layout';
 
 const Home = () => {
   return (
     <>
-      <h1>Title</h1>
+      <SearchForm />
     </>
   );
 };
