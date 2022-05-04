@@ -5,8 +5,8 @@ import * as S from './styles';
 interface FormSignProps {
   email: string;
   password: string;
-  onChangeEmail: (e: React.InputHTMLAttributes<HTMLInputElement>) => void;
-  onChangePassword: (e: React.InputHTMLAttributes<HTMLInputElement>) => void;
+  onChangeEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: (e: any) => void;
 }
 

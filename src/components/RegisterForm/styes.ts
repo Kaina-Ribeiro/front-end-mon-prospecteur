@@ -37,6 +37,5 @@ export const InputsWrapper = styled.div`
 
   gap: 2rem;
   width: 100%;
-  /* align-items: center; */
   justify-content: space-between;
 `;

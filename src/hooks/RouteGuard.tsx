@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { useAuth } from './Auth';
 
-function RouteGuard({ children }) {
+function RouteGuard({ children }: any) {
   const router = useRouter();
   const { token } = useAuth();
   const [authorized, setAuthorized] = useState(false);

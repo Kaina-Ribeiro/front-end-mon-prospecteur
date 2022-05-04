@@ -4,6 +4,7 @@ type LoginReturnProps = {
   token: string;
   refresh_token: string;
   user: { name: string; email: string };
+  message: string;
 };
 
 export const authApi = {

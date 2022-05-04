@@ -10,16 +10,13 @@ const Login = () => {
 
   const { signIn } = useAuth();
 
-  const handleChangeEmail = useCallback(async (e: React.InputHTMLAttributes<HTMLInputElement>) => {
+  const handleChangeEmail = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(String(e.currentTarget.value));
   }, []);
 
-  const handleChangePassword = useCallback(
-    async (e: React.InputHTMLAttributes<HTMLInputElement>) => {
-      setPassword(String(e.currentTarget.value));
-    },
-    [],
-  );
+  const handleChangePassword = useCallback(async (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(String(e.currentTarget.value));
+  }, []);
 
   const handleSubmit = useCallback(
     async (e: React.MouseEvent<HTMLFormElement>) => {

@@ -7,8 +7,10 @@ import {
   Radio,
   RadioGroup,
   Select,
+  SelectChangeEvent,
   Typography,
 } from '@mui/material';
+
 import * as S from './styes';
 
 interface IRegisterProps {
@@ -17,12 +19,12 @@ interface IRegisterProps {
   email: string;
   scholarity: string;
   gender: string;
-  onChangeName: (e) => void;
-  onChangeGender: (e) => void;
-  onChangeScholarity: (e) => void;
-  onChangeEmail: (e) => void;
-  onChangePassword: (e) => void;
-  handleSubmit: (e) => void;
+  onChangeName: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeGender: (e: SelectChangeEvent) => void;
+  onChangeScholarity: (e: SelectChangeEvent) => void;
+  onChangeEmail: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangePassword: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 }
 
 const RegisterForm = ({

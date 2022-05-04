@@ -4,14 +4,18 @@ import * as S from './styles';
 import { useEffect, useState } from 'react';
 import { searchApi } from '../../services/searchApi';
 
+interface ISearchProps {
+  address: string;
+}
+
 const SearchForm = () => {
   const [searchValue, setSearchValue] = useState('');
   const [search, setSearch] = useState([]);
 
   useEffect(() => {});
 
-  const handleChange = (e: React.SyntheticEvent) => {
-    let target = e.target as HTMLInputElement;
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let target = e.target;
 
     setSearchValue(target.value);
   };
@@ -36,7 +40,7 @@ const SearchForm = () => {
 
       <strong>{search.length} resultados encontrados</strong>
       {search.length &&
-        search.map((item) => {
+        search.map((item: ISearchProps) => {
           return (
             <>
               <p>{item.address}</p>

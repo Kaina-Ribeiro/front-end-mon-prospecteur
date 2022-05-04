@@ -1,7 +1,6 @@
-import { Router } from '@mui/icons-material';
 import { SelectChangeEvent } from '@mui/material';
 import Head from 'next/head';
-import { ReactElement, useState } from 'react';
+import { useState } from 'react';
 import LoginLayout from '../components/LoginLayout';
 import RegisterForm from '../components/RegisterForm';
 import { authApi } from '../services/authApi';
@@ -35,7 +34,7 @@ const Register = () => {
     setScholarity(event.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(name, password, email, scholarity, gender);
     authApi
@@ -70,7 +69,7 @@ const Register = () => {
 
 export default Register;
 
-Register.getLayout = (page: ReactElement) => {
+Register.getLayout = (page: React.ReactElement) => {
   return (
     <>
       <Head>
