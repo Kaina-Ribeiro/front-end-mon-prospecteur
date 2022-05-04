@@ -7,6 +7,10 @@ const nextConfig = {
 
   env: {
     API_URL: process.env.API_URL,
+    USER_MON: process.env.USER_MON,
+    TOKEN_MON: process.env.TOKEN_MON,
+    EMAIL_MON: process.env.EMAIL_MON,
+    REFRESH_TOKEN_MON: process.env.REFRESH_TOKEN_MON
   },
 };
 

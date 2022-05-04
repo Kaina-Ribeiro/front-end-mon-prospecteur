@@ -1,9 +1,12 @@
 import { Button } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useAuth } from '../../hooks/Auth';
 import * as S from './styles';
 
 const Header = () => {
+  const { signOut } = useAuth();
+
   return (
     <S.Wrapper>
       <S.WrapperImg>
@@ -32,11 +35,9 @@ const Header = () => {
           </Link>
         </li>
       </S.NavLinks>
-      <Link href="/login" passHref>
-        <Button variant="contained" color="secondary">
-          Login
-        </Button>
-      </Link>
+      <Button variant="contained" color="secondary" onClick={() => signOut()}>
+        Logout
+      </Button>
     </S.Wrapper>
   );
 };

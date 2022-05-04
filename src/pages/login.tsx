@@ -1,3 +1,4 @@
+import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ReactElement, useCallback, useState } from 'react';
@@ -9,8 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const { user, signIn } = useAuth();
-  const router = useRouter();
+  const { signIn } = useAuth();
 
   const handleChangeEmail = useCallback(async (e: React.InputHTMLAttributes<HTMLInputElement>) => {
     setEmail(String(e.currentTarget.value));
@@ -26,7 +26,7 @@ const Login = () => {
   const handleSubmit = useCallback(
     async (e: React.MouseEvent<HTMLFormElement>) => {
       e.preventDefault();
-      signIn({ email, password }, router.query.returnUrl);
+      signIn({ email, password });
     },
     [email, password, signIn],
   );
