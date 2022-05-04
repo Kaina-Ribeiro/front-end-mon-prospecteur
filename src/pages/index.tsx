@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { ReactElement } from 'react';
+import { ReactElement, useEffect } from 'react';
 import SearchForm from '../components/SearchForm';
 import Layout from '../components/Layout';
 
