@@ -1,3 +1,5 @@
+import { Typography } from '@mui/material';
+import Link from 'next/link';
 import * as S from './styles';
 
 interface FormSignProps {
@@ -5,14 +7,18 @@ interface FormSignProps {
   password: string;
   onChangeEmail: (e: React.InputHTMLAttributes<HTMLInputElement>) => void;
   onChangePassword: (e: React.InputHTMLAttributes<HTMLInputElement>) => void;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick: (e: any) => void;
 }
 
 const FormSign = ({ email, password, onChangeEmail, onChangePassword, onClick }: FormSignProps) => {
   return (
     <S.Wrapper>
-      <S.Form>
+      <Typography variant="h2" gutterBottom>
+        Login
+      </Typography>
+      <S.Form onSubmit={onClick}>
         <S.InputStyled
+          required
           type="email"
           label="E-mail"
           variant="standard"
@@ -20,6 +26,7 @@ const FormSign = ({ email, password, onChangeEmail, onChangePassword, onClick }:
           onChange={onChangeEmail}
         />
         <S.InputStyled
+          required
           type="password"
           label="Password"
           variant="standard"
@@ -27,9 +34,10 @@ const FormSign = ({ email, password, onChangeEmail, onChangePassword, onClick }:
           onChange={onChangePassword}
         />
 
-        <S.ForgotPass variant="caption">Forgot password?</S.ForgotPass>
-
-        <S.ButtonLogin variant="contained" color="secondary" onClick={onClick}>
+        <Link href="/register">
+          <S.CreateAccount>Create an accout?</S.CreateAccount>
+        </Link>
+        <S.ButtonLogin type="submit" variant="contained" color="primary">
           LOGIN
         </S.ButtonLogin>
       </S.Form>

@@ -8,7 +8,6 @@ interface ILoginLayoutProps {
 const LoginLayout = ({ children }: ILoginLayoutProps) => {
   return (
     <S.Layout>
-      <S.Title variant="h2">Login</S.Title>
       <main>{children}</main>
     </S.Layout>
   );

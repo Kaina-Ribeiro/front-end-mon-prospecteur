@@ -35,7 +35,7 @@ const Header = () => {
           </Link>
         </li>
       </S.NavLinks>
-      <Button variant="contained" color="secondary" onClick={() => signOut()}>
+      <Button variant="contained" color="primary" onClick={() => signOut()}>
         Logout
       </Button>
     </S.Wrapper>

@@ -1,14 +1,16 @@
 import styled from '@emotion/styled';
-import { Container, Typography } from '@mui/material';
+import { Container } from '@mui/material';
 
 export const Layout = styled(Container)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-`;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
 
-export const Title = styled(Typography)`
-  margin-bottom: 1rem;
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+  }
 `;

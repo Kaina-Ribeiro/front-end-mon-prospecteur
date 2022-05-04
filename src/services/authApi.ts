@@ -1,4 +1,3 @@
-import Router from 'next/router';
 import api from './baseApi';
 
 type LoginReturnProps = {
@@ -27,13 +26,16 @@ export const authApi = {
     }
   },
 
-  createUser: async (email: string, password: string, redirect?: string) => {
+  createUser: async (
+    name: string,
+    password: string,
+    email: string,
+    scholarity: string,
+    gender: string,
+  ) => {
     try {
-      const response = await api.post('/login', { email, password });
+      const response = await api.post('/users', { name, password, email, scholarity, gender });
 
-      if (redirect) {
-        Router.push(redirect);
-      }
       return response;
     } catch {
       return false;

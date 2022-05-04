@@ -1,16 +1,16 @@
 import styled from '@emotion/styled';
-import { Button, TextField } from '@mui/material';
+import { Button, TextField, Typography } from '@mui/material';
 
 export const Wrapper = styled.div`
-  width: 600px;
+  max-width: 800px;
+  width: 100%;
 `;
 
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+
+  gap: 3rem;
 `;
 
 export const InputStyled = styled(TextField)({
@@ -21,8 +21,7 @@ export const ButtonLogin = styled(Button)`
   width: 100%;
 `;
 
-export const CreateAccount = styled.a`
-  font-size: 0.8rem;
+export const ForgotPass = styled(Typography)`
   align-self: flex-end;
   cursor: pointer;
 
@@ -30,4 +29,14 @@ export const CreateAccount = styled.a`
   :hover {
     color: #00adb5;
   }
+`;
+
+export const InputsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 2rem;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: space-between;
 `;

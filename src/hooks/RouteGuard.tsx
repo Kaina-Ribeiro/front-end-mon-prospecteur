@@ -25,7 +25,7 @@ function RouteGuard({ children }) {
   }, [token]);
 
   function authCheck(url: string) {
-    const publicPaths = ['/login'];
+    const publicPaths = ['/login', '/register'];
     const path = url.split('?')[0];
 
     if (!token && !publicPaths.includes(path)) {
