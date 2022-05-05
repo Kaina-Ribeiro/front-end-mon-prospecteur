@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Nodejs
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+        
+      - name: Install Dependencies
+        run: yarn
+      
+      - name: build
+        run: yarn build
+    
+      - uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }} 
+          passphrase: ${{ secrets.SSH_PASSPHRASE }} 
+          source: "., !node_modules"
+          target: "~/prod/front-end-mon-prospecteur"
+      
+      - name: Update Front End
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          port: ${{ secrets.SSH_PORT }}
+          key: ${{ secrets.SSH_KEY }} 
+          passphrase: ${{ secrets.SSH_PASSPHRASE }} 
+          script: |
+            cd ~/prod/front-end-mon-prospecteur
+            yarn
+            yarn dev
