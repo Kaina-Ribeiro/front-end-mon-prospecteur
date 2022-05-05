@@ -21,8 +21,12 @@ const SearchForm = () => {
   };
 
   const handleSearch = async () => {
-    const response = await searchApi.search('Chemin');
-    setSearch(response);
+    if (searchValue) {
+      const response = await searchApi.search(searchValue);
+      setSearch(response);
+    } else {
+      alert('You need to write something!');
+    }
   };
 
   return (
@@ -38,15 +42,17 @@ const SearchForm = () => {
         </S.IconWrapper>
       </S.Search>
 
-      <strong>{search.length} resultados encontrados</strong>
-      {search.length &&
-        search.map((item: ISearchProps) => {
-          return (
-            <>
-              <p>{item.address}</p>
-            </>
-          );
-        })}
+      <S.SearchItems>
+        {search.length > 0 && <S.SearchResults>{search.length} results </S.SearchResults>}
+        {search.length > 0 &&
+          search.map((item: ISearchProps) => {
+            return (
+              <>
+                <p>{item.address}</p>
+              </>
+            );
+          })}
+      </S.SearchItems>
     </S.Wrapper>
   );
 };

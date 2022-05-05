@@ -47,3 +47,15 @@ export const IconWrapper = styled.button`
     filter: opacity(0.8);
   }
 `;
+
+export const SearchItems = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+`;
+
+export const SearchResults = styled.p`
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+`;

@@ -11,7 +11,6 @@ const Layout = ({ children }: ILayoutProps) => {
     <S.Layout>
       <Header />
       <main>{children}</main>
-      <footer>Footer</footer>
     </S.Layout>
   );
 };
