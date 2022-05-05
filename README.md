@@ -56,3 +56,5 @@ Feito por Gabriel Ribeiro 👋🏽
 [reactjs]: https://reactjs.org
 [yarn]: https://yarnpkg.com/
 [@emotion/react]: https://emotion.sh/docs/styled
+[vscode]: https://code.visualstudio.com/
+
