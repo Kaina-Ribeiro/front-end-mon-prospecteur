@@ -29,7 +29,7 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode][vsco
 
 ```bash
 # Acesse a pasta do projeto web
-$ cd mon-prospecteur-front-end
+$ cd front-end-mon-prospecteur
 
 # Instale as dependências
 $ yarn
