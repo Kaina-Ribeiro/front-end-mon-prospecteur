@@ -34,18 +34,26 @@ const Register = () => {
     setScholarity(event.target.value);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(name, password, email, scholarity, gender);
-    authApi
-      .createUser(name, password, email, scholarity, gender)
-      .then(() => {
-        alert('Usuário criado com sucesso!!');
-        router.push({
-          pathname: '/login',
-        });
-      })
-      .catch((err) => console.log(err));
+
+    const response = await authApi.createUser(name, password, email, scholarity, gender);
+
+    if (response.status === 400) {
+      alert(response.data.message);
+      return;
+    }
+
+    if (response.status !== 200 && response.status !== 201) {
+      alert('Erro inesperado');
+      return;
+    }
+
+    alert('Usuário criado com sucesso!');
+
+    router.push({
+      pathname: '/',
+    });
   };
 
   return (

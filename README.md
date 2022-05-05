@@ -2,6 +2,8 @@
 
 📝 Mon Prospecteur Front End - é um projeto desafiador proposto pela empresa **Mon Prospecteur** em que um usário pode logar, se registrar e procurar por endereços.
 
+Esse projeto está hospedado na AWS: http://15.228.47.130/login
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
@@ -17,7 +19,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### 🎲 **Back End (servidor)**
 
-- Para o cumprimento dos requisitos foi desenvolvido uma API Rest (https://github.com/Kaina-Ribeiro/api-mon-prospecteur) que está hospedada na AWS: http://15.228.78.209/api-docs/
+- Para o cumprimento dos requisitos foi desenvolvido uma API Rest (https://github.com/Kaina-Ribeiro/api-mon-prospecteur) que está hospedada na AWS: http://15.228.47.130/api/api-docs/
 
 ### Pré-requisitos
 

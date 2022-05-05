@@ -59,7 +59,7 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({
     const userInfo = await authApi.login(email, password);
 
     if (!userInfo) {
-      alert('Não foi possível fazer a conexão');
+      alert('Não foi possível fazer o login');
       return;
     }
 

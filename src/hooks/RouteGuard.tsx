@@ -33,7 +33,7 @@ function RouteGuard({ children }: any) {
       router.push({
         pathname: '/login',
       });
-    } else if (token && path == '/login') {
+    } else if (token && publicPaths.includes(path)) {
       setAuthorized(false);
       router.push({
         pathname: '/',

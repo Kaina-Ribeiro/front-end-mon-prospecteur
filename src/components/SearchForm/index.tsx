@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import * as S from './styles';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { searchApi } from '../../services/searchApi';
 
 interface ISearchProps {
@@ -11,8 +11,6 @@ interface ISearchProps {
 const SearchForm = () => {
   const [searchValue, setSearchValue] = useState('');
   const [search, setSearch] = useState([]);
-
-  useEffect(() => {});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let target = e.target;
