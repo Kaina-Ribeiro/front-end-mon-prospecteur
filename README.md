@@ -17,7 +17,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### 🎲 **Back End (servidor)**
 
-- Para o cumprimento dos requisitos foi desenvolvido uma API Rest (https://github.com/Kaina-Ribeiro/api-mon-prospecteur) que está hospedada na AWS: http://15.228.78.209
+- Para o cumprimento dos requisitos foi desenvolvido uma API Rest (https://github.com/Kaina-Ribeiro/api-mon-prospecteur) que está hospedada na AWS: http://15.228.78.209/api-docs/
 
 ### Pré-requisitos
 
