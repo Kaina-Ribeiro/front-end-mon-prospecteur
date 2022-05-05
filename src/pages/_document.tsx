@@ -8,9 +8,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* Essa linha só existe para fazer requisições HTTP, será retirada no futuro */}
-          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/static/favicon.ico" />
           <link
