@@ -49,6 +49,7 @@ Feito por Gabriel Ribeiro 👋🏽
 
 [nextjs]: https://nextjs.org/
 [axios]: https://axios-http.com/ptbr/docs/intro
+[js-cookies]: https://www.npmjs.com/package/js-cookie
 [nodejs]: https://nodejs.org/
 [typescript]: https://www.typescriptlang.org/
 [@mui/material]: https://mui.com/
