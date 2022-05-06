@@ -6,7 +6,10 @@ export const GlobalStyles = css`
     padding: 0;
     box-sizing: border-box;
   }
-
+  button,
+  input {
+    font-family: 'Roboto', sans-serif;
+  }
   html,
   body {
     ul {
